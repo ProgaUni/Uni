@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include "first_interface.h"
+
 
 typedef struct TwoDimensionalArray {
     int rows;

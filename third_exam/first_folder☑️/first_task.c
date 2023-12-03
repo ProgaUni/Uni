@@ -16,7 +16,7 @@ int main(void)
     printf("  Vsevolod Rybnik test 3 task 1 var 26\n");
     while (loop_indicator)
     {
-        HashTable* min_max_table = createHashTable();
+        int* result;
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
         options = GetDouble();
         switch (options)
@@ -29,18 +29,16 @@ int main(void)
             case ManualInput:
                 array = make_array(ROWS, COLS, false);
                 output(array);
-                algorithm(array, min_max_table);
-                printf("Min Element: %d\nMax Element: %d\n", get(min_max_table, "min"), get(min_max_table, "max"));
+                result = max_min_finder(array);
+                printf("Min Element: %d\nMax Element: %d\n", result[0], result[1]);
                 clean_space(&array);
-                destroyHashTable(min_max_table);
                 continue;
             case RandomInput:
                 array = make_array(ROWS, COLS, true);
                 output(array);
-                algorithm(array, min_max_table);
-                printf("Min Element: %d\nMax Element: %d\n", get(min_max_table, "min"), get(min_max_table, "max"));
+                result = max_min_finder(array);
+                printf("Min Element: %d\nMax Element: %d\n", result[0], result[1]);
                 clean_space(&array);
-                destroyHashTable(min_max_table);
                 continue;
         }
     }
