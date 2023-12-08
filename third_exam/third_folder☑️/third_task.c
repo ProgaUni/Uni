@@ -3,7 +3,6 @@
 #include "third_algorithm.h"
 
 
-#define ARRAY_LEN 6
 
 
 enum MENU {Man=1, Rand=2, Quit=3};
@@ -12,12 +11,16 @@ enum MENU {Man=1, Rand=2, Quit=3};
 int main(void)
 {
     srand(time(NULL));
-    int loop_indicator = 1, options = 1, array[ARRAY_LEN];
+    int ARRAY_LEN = 0;
+    int loop_indicator = 1, options = 1;
+    int* array = (int*)malloc(sizeof(int));
     printf("  Vsevolod Rybnik test 3 task 3 var 26\n");
     while (loop_indicator)
     {
+        puts("Specfiy array length: ");
+        ARRAY_LEN = get_int();
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
-        options = GetInt();
+        options = get_int();
         switch (options)
         {
             case Man:

@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 
-int GetInt(void)
+int get_int(void)
 {
     char temprem, tempclear;
     int input  = 0;

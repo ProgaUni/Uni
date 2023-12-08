@@ -9,7 +9,6 @@
 #define lower_left_border 192
 #define lower_right_border 217
 #define underline 196
-#define underline_amount 38
 #define aside_border 179
 
 
@@ -44,7 +43,7 @@ Array make_array(int rows, int cols, bool rand_man_indicator)
         for (int row = 0; row < array.rows; row++) {
             for (int col = 0; col < array.cols; col++) {
                 printf("  - Specify %d %d element of Matrix: ", row+1, col+1);
-                array.data[row][col] = GetDouble();
+                array.data[row][col] = get_double();
             }
     }
     }
@@ -66,6 +65,7 @@ void clean_space(Array *array)
 void output(Array array)
 {
     printf("  %c", upper_left_border);
+    int underline_amount = 6 * array.cols + 2;
 	for (int i = 1; i < underline_amount; i++)
 		printf("%c", underline);
 	printf("%c\n", upper_right_border);

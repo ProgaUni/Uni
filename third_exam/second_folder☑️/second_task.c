@@ -19,7 +19,7 @@ int main(void)
         char sequence[EL_AMOUNT];
         char* bits;
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
-        options = GetInt();
+        options = get_int();
         switch (options)
         {
             case Man:

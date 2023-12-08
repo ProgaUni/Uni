@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 
-int GetInt(void);
+int get_int(void);
 
 void output(int array[], int ARRAY_LEN);
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int GetInt(void)
+int get_int(void)
 {
     char temprem, tempclear;
     int input  = 0;
@@ -41,7 +41,7 @@ int* bind_values(int array[], bool rand_indicator, int ARRAY_LEN)
             array[i] = -99 + rand()%(100+98);
         } else {
             printf("  - Specify %d element of Array: ", i+1);
-            array[i] = GetInt();
+            array[i] = get_int();
         }
     }
     return array;
