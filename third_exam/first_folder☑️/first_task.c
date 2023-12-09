@@ -20,7 +20,7 @@ int main(void)
         puts("  Cols:");
         cols = get_int();
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
-        options = get_double();
+        options = get_int();
         switch (options)
         {
             default:

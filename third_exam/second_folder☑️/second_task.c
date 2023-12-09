@@ -24,7 +24,7 @@ int main(void)
         {
             case Man:
                 puts("Specify your symbols sequence: ");
-                scanf("%s", sequence);
+                get_sequence(sequence, EL_AMOUNT);
                 bits = algorithm(sequence, EL_AMOUNT);
                 printf("...And result is -> %s\n", bits);
                 printf("In ASCII - %s\n", back_to_char(bits, EL_AMOUNT));

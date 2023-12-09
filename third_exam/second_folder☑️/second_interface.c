@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 
 int get_int(void)
@@ -17,8 +18,26 @@ int get_int(void)
         	while(tempclear != '\n')
             	scanf("%c",&tempclear);
         }
-    else
-        return input;
+    	else
+        	return input;
+    }
+}
+
+char* get_sequence(char* sequence, int length){
+	char temprem, tempclear;
+    while(true)
+    {
+        temprem=0;
+        tempclear=0;
+		sequence[0]='\0';
+        if((!scanf("%s",sequence))|| (int)strlen(sequence) != length)
+        {
+            printf("  - Error: Invalid value for 8 length string sequence.\nOne more time: ");
+        	while(tempclear != '\n')
+            	scanf("%c",&tempclear);
+        }
+    	else
+        	return sequence;
     }
 }
 
