@@ -34,6 +34,8 @@ int main(void)
                 result = max_min_finder(array);
                 printf("Min Element: %d\nMax Element: %d\n", result[0], result[1]);
                 clean_space(&array);
+                free(result);
+                result = NULL;
                 continue;
             case RandomInput:
                 array = make_array(rows, cols, true);
@@ -41,6 +43,8 @@ int main(void)
                 result = max_min_finder(array);
                 printf("Min Element: %d\nMax Element: %d\n", result[0], result[1]);
                 clean_space(&array);
+                free(result);
+                result = NULL;
                 continue;
         }
     }

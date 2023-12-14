@@ -24,10 +24,9 @@ int get_int(void)
 }
 
 char* get_sequence(char* sequence, int length){
-	char temprem, tempclear;
+	char tempclear;
     while(true)
     {
-        temprem=0;
         tempclear=0;
 		sequence[0]='\0';
         if((!scanf("%s",sequence))|| (int)strlen(sequence) != length)

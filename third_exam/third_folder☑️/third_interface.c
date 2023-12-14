@@ -10,7 +10,7 @@ int get_int(void)
     {
         temprem=0;
         tempclear=0;
-        if((!scanf("%d%c",&input ,&temprem))|| temprem != '\n')
+        if((!scanf("%d%c",&input ,&temprem))|| temprem != '\n' || input <= 0)
         {
             printf("  - Error: Invalid value for int variables.\nOne more time: ");
         	while(tempclear != '\n')

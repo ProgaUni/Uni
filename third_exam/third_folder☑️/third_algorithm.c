@@ -12,3 +12,4 @@ int fold(int array[], int array_len, int (*sum)(int, int))
     }
     return result_sum;
 }
+

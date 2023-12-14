@@ -27,11 +27,15 @@ int main(void)
                 bind_values(array, false, ARRAY_LEN);
                 printf("Result: %d \n", fold(array, ARRAY_LEN, algorithm));
                 output(array, ARRAY_LEN);
+                free(array);
+                array = NULL;
                 continue;
             case Rand:
                 bind_values(array, true, ARRAY_LEN);
                 output(array, ARRAY_LEN);
                 printf("Result: %d \n", fold(array, ARRAY_LEN, algorithm));
+                free(array);
+                array = NULL;
                 continue;
             case Quit:
                 puts("  Bye, see you later!");

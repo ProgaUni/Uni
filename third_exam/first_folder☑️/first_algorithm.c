@@ -16,3 +16,4 @@ int* max_min_finder(Array array)
     }
     return result;
 }
+
