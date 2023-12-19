@@ -20,7 +20,7 @@ int main(void)
         
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
         options = get_int();
-		char sequence[EL_AMOUNT];
+		unsigned char sequence[EL_AMOUNT];
         switch (options)
         {
             case Man:

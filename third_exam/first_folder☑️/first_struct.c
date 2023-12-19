@@ -15,7 +15,7 @@
 struct TwoDimensionalArray {
     int rows;
     int cols;
-    int **data;
+    double **data;
 };
 
 
@@ -27,14 +27,14 @@ Array make_array(int rows, int cols, bool rand_man_indicator)
     Array array;
     array.rows = rows;
     array.cols = cols;
-    array.data = (int **) malloc(array.rows * sizeof(int *));  // https://ufchgu.ru/blog/realloc-malloc-calloc-chem-zapolnjaet#:~:text=Функция%20malloc%20принимает%20один%20аргумент,количество%20элементов%20и%20их%20размер.
+    array.data = (double **) calloc(array.rows, sizeof(double *));  // https://ufchgu.ru/blog/realloc-malloc-calloc-chem-zapolnjaet#:~:text=Функция%20malloc%20принимает%20один%20аргумент,количество%20элементов%20и%20их%20размер.
     for (int row = 0; row < array.rows; row++) {
-        array.data[row] = (int *) malloc(array.cols * sizeof(int));
+        array.data[row] = (double *) calloc(array.cols, sizeof(double));
     }
     if (rand_man_indicator){
         for (int row = 0; row < array.rows; row++) {
             for (int col = 0; col < array.cols; col++) {
-                array.data[row][col] = -99 + rand()%(100 + 98);
+                array.data[row][col] = ((double) (-99 + rand()%(100+98)) / 10.0) * 5.0;
             }
         }
     }
@@ -65,7 +65,7 @@ void clean_space(Array *array)
 void output(Array array)
 {
     printf("  %c", upper_left_border);
-    int underline_amount = 6 * array.cols + 2;
+    int underline_amount = 8 * (array.cols) + 2;
 	for (int i = 1; i < underline_amount; i++)
 		printf("%c", underline);
 	printf("%c\n", upper_right_border);
@@ -77,7 +77,7 @@ void output(Array array)
 				printf(" ");
 			double digits = floor(log10(abs(array.data[row][col]))) + 1;
 			printf("%*s", digits == 2? 2 : digits == 3? 1 : 3, " ");
-            printf("%d ", array.data[row][col]);
+            printf("%0.1f ", array.data[row][col]);
         }
         printf(" %c\n", aside_border);
     }

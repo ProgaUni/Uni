@@ -3,7 +3,7 @@
 
 int* max_min_finder(Array array)
 {
-    int* result = (int*)malloc(2 * sizeof(int));  // 0 элемент - min, 1 - max
+    int* result = (int*)calloc(2, sizeof(int));  // 0 элемент - min, 1 - max
     result[0] = array.data[array.rows-1][array.cols-1];
     result[1] = array.data[array.rows-1][array.cols-1];
     for (int rows = 1; rows < array.rows; rows++)

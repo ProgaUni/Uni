@@ -1,5 +1,5 @@
 #include <stdio.h>
 #include <string.h>
 
-char* algorithm(char* sequence, int seq_len);
+unsigned char* algorithm(unsigned char* sequence, int seq_len);
 

@@ -26,7 +26,7 @@ int get_int(void)
     }
 }
 
-char* get_sequence(char* sequence, int length){
+unsigned char* get_sequence(unsigned char* sequence, int length){
 	char tempclear;
     while(true)
     {
@@ -45,7 +45,7 @@ char* get_sequence(char* sequence, int length){
 }
 
 
-char* get_random_sequence(char* sequence, int length)
+unsigned char* get_random_sequence(unsigned char* sequence, int length)
 {
     for (int i = 0; i < length; i++) {
         sequence[i] = rand() % 100 + 'A';
@@ -55,7 +55,7 @@ char* get_random_sequence(char* sequence, int length)
 }
 
 
-void output(char* sequence, int seq_len, char* key_word){
+void output(unsigned  char* sequence, int seq_len, char* key_word){
 	for (int element = 0; element < seq_len; element++){
 		printf("%s bitwise representation of '%c': ", key_word, sequence[element]);
 		for (int i = 7; i >= 0; i--) {

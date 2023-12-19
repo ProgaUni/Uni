@@ -4,6 +4,6 @@
 
 
 int get_int(void);
-char* get_random_sequence(char* sequence, int length);
-char* get_sequence(char* sequence, int length);
-void output(char* sequence, int seq_len, char* key_word);
+unsigned char* get_random_sequence(unsigned char* sequence, int length);
+unsigned char* get_sequence(unsigned char* sequence, int length);
+void output(unsigned char* sequence, int seq_len, char* key_word);

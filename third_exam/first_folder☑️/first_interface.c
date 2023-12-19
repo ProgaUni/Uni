@@ -24,19 +24,14 @@ double get_double(void)
 
 int get_int(void)
 {
-    char temprem, tempclear;
-    int input  = 0;
-    while(true)
-    {
-        temprem=0;
-        tempclear=0;
-        if((!scanf("%d%c",&input ,&temprem))|| temprem != '\n' || input <= 0)
-        {
-            printf("  - Error: Invalid value for int variables.\nOne more time: ");
-        	while(tempclear != '\n')
-            	scanf("%c",&tempclear);
-        }
-    else
-        return input;
-    }
+  int input = 0;
+
+  while (!scanf("%d", &input)){
+    while (getchar() != '\n');
+    puts("Error, specify another value.");
+  }
+
+  while (getchar() != '\n');
+
+  return input; 
 }

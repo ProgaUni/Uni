@@ -9,16 +9,22 @@ int main(void)
 {
     srand(time(NULL));
     int options = 1, loop_indicator = 1;
-    int rows = 0, cols = 0;
+    
     Array array;
     printf("  Vsevolod Rybnik test 3 task 1 var 26\n");
     while (loop_indicator)
     {
+		int rows = 0, cols = 0;
         int* result;
-        puts("Specify matrix size: \n  Rows: ");
+        puts("Specify matrix size:");
+		while (rows <= 0){
+		printf("\n  Rows *value must be >= 0: ");
         rows = get_int();
-        puts("  Cols:");
+		}
+		while (cols <= 0){
+        printf("  Cols *value must be >= 0: ");
         cols = get_int();
+		}
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
         options = get_int();
         switch (options)

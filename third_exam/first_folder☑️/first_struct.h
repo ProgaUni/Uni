@@ -5,7 +5,7 @@
 typedef struct TwoDimensionalArray {
     int rows;
     int cols;
-    int **data;
+    double **data;
 } Array;
 
 Array random_values_for_array(Array array);

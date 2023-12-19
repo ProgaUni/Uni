@@ -2,50 +2,50 @@
 <settings version="1.0">
 	<category name="second_interface.h">
 		<category name="Window">
-			<property name="Left" type="integer">0</property>
-			<property name="Top" type="integer">0</property>
-			<property name="Right" type="integer">2304</property>
-			<property name="Bottom" type="integer">937</property>
-			<property name="Maximized" type="integer">0</property>
-			<property name="Active" type="integer">0</property>
-		</category>
-	</category>
-	<category name="second_interface.c">
-		<category name="Window">
-			<property name="Left" type="integer">4294967283</property>
-			<property name="Top" type="integer">4294967238</property>
-			<property name="Right" type="integer">2332</property>
-			<property name="Bottom" type="integer">1263</property>
+			<property name="Left" type="integer">4294967288</property>
+			<property name="Top" type="integer">4294967265</property>
+			<property name="Right" type="integer">1223</property>
+			<property name="Bottom" type="integer">578</property>
 			<property name="Maximized" type="integer">1</property>
 			<property name="Active" type="integer">1</property>
 		</category>
 	</category>
+	<category name="second_interface.c">
+		<category name="Window">
+			<property name="Left" type="integer">26</property>
+			<property name="Top" type="integer">26</property>
+			<property name="Right" type="integer">1226</property>
+			<property name="Bottom" type="integer">453</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
 	<category name="second_algorithm.c">
 		<category name="Window">
-			<property name="Left" type="integer">98</property>
-			<property name="Top" type="integer">98</property>
-			<property name="Right" type="integer">2402</property>
-			<property name="Bottom" type="integer">1035</property>
+			<property name="Left" type="integer">52</property>
+			<property name="Top" type="integer">52</property>
+			<property name="Right" type="integer">1252</property>
+			<property name="Bottom" type="integer">479</property>
 			<property name="Maximized" type="integer">0</property>
 			<property name="Active" type="integer">0</property>
 		</category>
 	</category>
 	<category name="second_algorithm.h">
 		<category name="Window">
-			<property name="Left" type="integer">147</property>
-			<property name="Top" type="integer">147</property>
-			<property name="Right" type="integer">2451</property>
-			<property name="Bottom" type="integer">1084</property>
+			<property name="Left" type="integer">78</property>
+			<property name="Top" type="integer">78</property>
+			<property name="Right" type="integer">1278</property>
+			<property name="Bottom" type="integer">505</property>
 			<property name="Maximized" type="integer">0</property>
 			<property name="Active" type="integer">0</property>
 		</category>
 	</category>
 	<category name="second_task.c">
 		<category name="Window">
-			<property name="Left" type="integer">196</property>
-			<property name="Top" type="integer">196</property>
-			<property name="Right" type="integer">2500</property>
-			<property name="Bottom" type="integer">1133</property>
+			<property name="Left" type="integer">104</property>
+			<property name="Top" type="integer">104</property>
+			<property name="Right" type="integer">1304</property>
+			<property name="Bottom" type="integer">531</property>
 			<property name="Maximized" type="integer">0</property>
 			<property name="Active" type="integer">0</property>
 		</category>

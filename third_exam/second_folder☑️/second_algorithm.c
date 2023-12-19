@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "second_interface.h"
 
-char* algorithm(char* sequence, int seq_len) {
+unsigned char* algorithm(unsigned char* sequence, int seq_len) {
 	output(sequence, seq_len, "Original");
     for (int i = 0; i < seq_len; i++) {
         if (((sequence[i] >> 7) & 1) == (sequence[i] & 0)) {
