@@ -10,35 +10,34 @@ enum MENU {Man=1, Rand=2, Quit=3};
 
 int main(void)
 {
-    setlocale (LC_CTYPE, "RU");
+    
     srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
     int loop_indicator = 1, options = 1;
     printf("  Vsevolod Rybnik test 3 task 2 var 26\n");
     while (loop_indicator)
     {
-        char sequence[EL_AMOUNT];
-        char* bits;
+        
         puts("  1 - Manual input\n  2 - Random input\n  3 - Quit");
         options = get_int();
+		char sequence[EL_AMOUNT];
         switch (options)
         {
             case Man:
-                puts("Specify your symbols sequence: ");
+                puts("Specify your symbols sequence, in case overflow it will take first 8: ");
                 get_sequence(sequence, EL_AMOUNT);
-                bits = algorithm(sequence, EL_AMOUNT);
-                printf("...And result is -> %s\n", bits);
-                printf("In ASCII - %s\n", back_to_char(bits, EL_AMOUNT));
-                free(bits);
+                algorithm(sequence, EL_AMOUNT);
+                printf("\n...And result is -> %s\n", sequence);
                 continue;
             case Rand:
                 printf(
                     "Your random symbol sequence is %s\n",
                     get_random_sequence(sequence, EL_AMOUNT)
                 );
-                bits = algorithm(sequence, EL_AMOUNT);
-                printf("...And result is -> %s\n", bits);
-                printf("In ASCII - %s\n", back_to_char(bits, EL_AMOUNT));
-                free(bits);
+				
+                algorithm(sequence, EL_AMOUNT);
+                printf("\n...And result is -> %s\n", sequence);
+				
                 continue;
             case Quit:
                 puts("  Bye, see you later!");

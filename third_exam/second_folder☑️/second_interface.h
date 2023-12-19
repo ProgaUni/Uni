@@ -5,6 +5,5 @@
 
 int get_int(void);
 char* get_random_sequence(char* sequence, int length);
-char* back_to_char(char* bits, int seq_len);
 char* get_sequence(char* sequence, int length);
-
+void output(char* sequence, int seq_len, char* key_word);
